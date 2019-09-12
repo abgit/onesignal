@@ -1,0 +1,13 @@
+{
+	"name": "abgit/onesignal",
+	"description": "A simple onesignal php wrapper",
+    "require": {
+        "ext-json": "*",
+        "rmccue/requests": "1.*"
+	},
+	"autoload": {
+        "psr-4": {
+            "onesignal\\": "src/"
+        }
+    }
+}
