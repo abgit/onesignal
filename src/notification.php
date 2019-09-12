@@ -23,9 +23,9 @@ class notification{
 
         $notification[ 'app_id' ] = $this->id;
 
-        $req = Requests::post( 'https://onesignal.com/api/v1/notifications', $headers, $notification );
+        $req = Requests::post( 'https://onesignal.com/api/v1/notifications', $headers, json_encode( $notification ) );
 
-        $output = $req->body;
+        $output = json_decode( $req->body, true );
 
         return $req->status_code == 200;
     }
